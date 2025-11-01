@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assignment-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: assignment
+  template:
+    metadata:
+      labels:
+        app: assignment
+    spec:
+      containers:
+        - name: kubedemo
+          image: komsujani23/assignment:v1
+          ports:
+            - containerPort: 5000
