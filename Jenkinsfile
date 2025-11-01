@@ -17,8 +17,8 @@ pipeline{
         }
         stage('Pushing image to Docker'){
             steps{
-                bat 'docker tag assignment:v1 komsujani23/assignment:v1'
-                bat 'docker push komsujani23/assignment:v1'
+                bat 'docker tag assignment:v1 komsujani23/assignment:project'
+                bat 'docker push komsujani23/assignment:project'
             }
         }
         stage('Deploying to Kubernetes'){
