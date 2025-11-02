@@ -13,7 +13,7 @@ spec:
         app: assignment
     spec:
       containers:
-        - name: kubedemo
+        - name: assignment
           image: komsujani23/assignment:project
           ports:
             - containerPort: 5000
